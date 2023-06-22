@@ -1,0 +1,68 @@
+@import "mixin";
+
+.technologies {
+  padding: 80px 0px 110px 0px;
+
+  .tech {
+    position: sticky;
+    top: 100px;
+  }
+  .course {
+    background-color: white;
+    border-radius: 10px;
+    height: 175px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 6px 6px 12px #c5c5c5, -2px -2px 12px #e1e1e1;
+    transition: all 0.5s ease;
+
+    &:hover {
+      box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+    }
+
+    img {
+      transform: scale(1.2);
+      transition: all 0.5s ease;
+    }
+
+    &:hover img {
+      transform: scale(1);
+    }
+  }
+
+  h5 {
+    font-weight: 600;
+    color: #919EAB;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+
+  h6 {
+    color: black;
+    margin-top: 24px;
+    font-size: 16px;
+  }
+
+  img {
+    max-height: 45px;
+  }
+}
+
+@media (max-width: 576px) {
+  .technologies {
+    padding: 40px 0px;
+  }
+}
+
+@media (max-width:1025px) {
+  .tech {
+    padding-top: 20px;
+  }
+
+  .technologies h6 {
+    font-size: 14px;
+  }
+}

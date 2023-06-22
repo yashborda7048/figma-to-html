@@ -1,0 +1,81 @@
+.service {
+    padding: 80px 0px 30px 0px;
+
+    .design {
+        width: 64px;
+        height: 64px;
+        display: inline-block;
+        background-color: #FA541C;
+        mask: url('asset/image/ic_design.svg') no-repeat center/contain;
+        -webkit-mask: url('asset/image/ic_design.svg') no-repeat center/contain;
+    }
+
+    .card {
+        border-radius: 16px;
+        border: none;
+        height: 100%;
+        padding: 40px 20px;
+        transition: all 0.6s ease;
+        background-color: #fff;
+        box-shadow: 0 0 11px rgba(33, 33, 33, .2);
+        overflow: hidden;
+
+        &::before {
+            width: 120px;
+            height: 120px;
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            background: $color;
+            opacity: 0.7;
+            transition: .5s linear;
+            transform: scale(1);
+            transition: all 0.3s ease;
+        }
+
+        &::before {
+            bottom: -10%;
+            right: -10%;
+        }
+
+        .card-body {
+            margin: 40px 30px;
+            padding: 0px;
+            transform: scale(1);
+            transition: all 0.3s ease;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        img {
+            display: inline-block;
+            margin: auto;
+            transform: scale(1);
+            width: 90px;
+            transition: all 0.3s ease;
+        }
+
+        &:hover  .card-body {
+            transform: scale(1.1);
+        }
+
+        &:hover::before ,
+        &:hover img {
+            transform: scale(1.1);
+        }
+
+    }
+}
+
+@media (max-width: 576px) {
+    .service {
+        padding: 40px 0px;
+    }
+
+    .service .card {
+        padding: 30px 20px !important;
+    }
+}
