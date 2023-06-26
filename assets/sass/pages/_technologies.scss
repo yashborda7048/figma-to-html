@@ -1,68 +1,39 @@
-@import "mixin";
-
 .technologies {
-  padding: 80px 0px 110px 0px;
-
   .tech {
     position: sticky;
     top: 100px;
   }
-  .course {
-    background-color: white;
-    border-radius: 10px;
-    height: 175px;
+
+  .technology-container .course {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    box-shadow: 0 35px 67px rgba(29, 35, 115, 0.07), 0 35px 28px rgba(29, 35, 115, 0.05), 0 19px 15px rgba(29, 35, 115, 0.042), 0 11px 8px rgba(29, 35, 115, 0.035), 0 5px 5px rgba(29, 35, 115, 0.028), 0 2px 2px rgba(29, 35, 115, 0.02);
+    border-radius: 16px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    box-shadow: 6px 6px 12px #c5c5c5, -2px -2px 12px #e1e1e1;
-    transition: all 0.5s ease;
-
-    &:hover {
-      box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
-    }
+    position: relative;
+    transition: all 0.3s ease;
 
     img {
-      transform: scale(1.2);
-      transition: all 0.5s ease;
+      max-height: 42px;
     }
 
-    &:hover img {
-      transform: scale(1);
+    h6 {
+      position: absolute;
+      top: 110px;
+      visibility: hidden;
+      color: rgb(39, 50, 102);
+      font-size: 14px;
     }
-  }
 
-  h5 {
-    font-weight: 600;
-    color: #919EAB;
-    text-transform: uppercase;
-    font-size: 12px;
-  }
+    &:hover {
+      transform: scale(1.1);
 
-  h6 {
-    color: black;
-    margin-top: 24px;
-    font-size: 16px;
-  }
-
-  img {
-    max-height: 45px;
-  }
-}
-
-@media (max-width: 576px) {
-  .technologies {
-    padding: 40px 0px;
-  }
-}
-
-@media (max-width:1025px) {
-  .tech {
-    padding-top: 20px;
-  }
-
-  .technologies h6 {
-    font-size: 14px;
+      h6 {
+        visibility: visible;
+      }
+    }
   }
 }

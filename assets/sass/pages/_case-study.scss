@@ -1,95 +1,74 @@
-.case-study {
-    padding: 80px 0px;
+.case-study #portfolio {
+    gap: 35px;
+    grid-template-columns: repeat(3, 1fr);
 
-    #portfolio {
-        gap: 35px;
-        grid-template-columns: repeat(3, 1fr);
+    .card {
+        border: none;
+        background: transparent;
 
-        .card {
-            border: none;
-            background: transparent;
-
-            &:hover .card-img {
-                img {
-                    transform: scale(1);
-                }
-                .overlay {
-                    opacity: 1;
-                }
+        &:hover .card-img {
+            img {
+                transform: scale(1);
             }
 
-            .card-img {
-                border-radius: 16px;
-                max-height: 336px;
-                overflow: hidden;
-                position: relative;
-
-                img {
-                    cursor: pointer;
-                    transform: scale(1.1);
-                    transition: all 0.3s ease;
-                }
-
-                .overlay {
-                    position: absolute;
-                    bottom: 0;
-                    top: 0;
-                    opacity: 0;
-                    background: rgb(9,196,178);
-                    background: linear-gradient(270deg, rgba(9,196,178,0.2637429971988795) 10%, rgba(33,93,88,0.2329306722689075) 90%);
-                    color: #f1f1f1;
-                    width: 100%;
-                    transition: all 0.3s ease;
-                }
+            .overlay {
+                opacity: 1;
             }
+        }
 
-            .card-title {
-                font-weight: 700;
-                line-height: 1.5;
-                font-size: 12px;
-                text-transform: uppercase;
-                font-family: '__Public_Sans_a5724b', '__Public_Sans_Fallback_a5724b', Helvetica, Arial, sans-serif;
-                color: #919EAB;
-            }
+        .card-img {
+            border-radius: 16px;
+            max-height: 336px;
+            overflow: hidden;
+            position: relative;
 
-            .link {
+            img {
                 cursor: pointer;
-                font-weight: 600;
-                line-height: 1.5;
-                font-size: 15px;
-                font-family: '__Barlow_59217c', '__Barlow_Fallback_59217c', Helvetica, Arial, sans-serif;
-                overflow: hidden;
-                text-transform: lowercase;
-                text-overflow: ellipsis;
-                color: $color;
-                background-position: 0 100%;
-                background-repeat: no-repeat;
-                transition: all .35s ease;
-                background-size: 0 1px;
+                transform: scale(1.1);
+                transition: all 0.3s ease;
             }
 
-            &:hover .link {
-                background-image: linear-gradient(130deg, $color, $color);
-                background-size: 100% 2px;
+            .overlay {
+                position: absolute;
+                bottom: 0;
+                top: 0;
+                opacity: 0;
+                background: rgb(9, 196, 178);
+                background: linear-gradient(270deg, rgba(9, 196, 178, 0.2637429972) 10%, rgba(33, 93, 88, 0.2329306723) 90%);
+                color: #f1f1f1;
+                width: 100%;
+                transition: all 0.3s ease;
             }
         }
-    }
-}
 
-@media (max-width: 991.98px) {
-    .case-study {
-        #portfolio {
-            gap: 30px;
-            grid-template-columns: repeat(2, 1fr);
+        .card-title {
+            font-weight: 700;
+            line-height: 1.5;
+            font-size: 12px;
+            text-transform: uppercase;
+            font-family: "__Public_Sans_a5724b", "__Public_Sans_Fallback_a5724b", Helvetica, Arial, sans-serif;
+            color: #919EAB;
         }
-    }
-}
 
-@media (max-width: 576.98px) {
-    .case-study {
-        #portfolio {
-            gap: 20px;
-            grid-template-columns: repeat(1, 1fr);
+        .link {
+            cursor: pointer;
+            font-weight: 600;
+            line-height: 1.5;
+            font-size: 15px;
+            font-family: "__Barlow_59217c", "__Barlow_Fallback_59217c", Helvetica, Arial, sans-serif;
+            overflow: hidden;
+            text-transform: lowercase;
+            text-overflow: ellipsis;
+            color: #37afc2;
+            background-position: 0 100%;
+            background-repeat: no-repeat;
+            transition: all 0.35s ease;
+            background-size: 0 1px;
+        }
+
+        &:hover .link {
+            background-image: linear-gradient(130deg, #37afc2, #37afc2);
+            background-size: 100% 2px;
         }
     }
 }

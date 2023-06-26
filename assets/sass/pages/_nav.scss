@@ -5,76 +5,79 @@
     right: 0;
     left: 0;
     z-index: 999;
-    background-color: rgba(248, 249, 250, 0.635);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6px);
-
-    .navbar-toggler:focus {
+  
+    &.active_nav {
+      background-color: rgba(248, 249, 250, 0.635);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      -webkit-backdrop-filter: blur(18px);
+      backdrop-filter: blur(18px);
+  
+      .navbar-collapse.show {
+        padding: 0px;
+        background-color: transparent;
+      }
+    }
+  
+    li a {
+      font-size: 14px;
+      font-weight: 500;
+      color: #637381;
+      margin-left: 10px;
+      transition: all 0.4s ease;
+      white-space: nowrap;
+      text-transform: capitalize;
+    }
+  
+    .navbar-collapse {
+      flex-grow: 0;
+  
+      &.show {
+        padding: 0px 0px 20px;
+        background-color: rgb(248, 249, 250);
+      }
+    }
+  
+    .nav-item a:hover {
+      color: #37afc2;
+    }
+  
+    .navbar-toggler {
+      border: none;
+  
+      &:focus {
         box-shadow: none;
         border: none;
-    }
-
-    .navbar-toggler {
-        border: none;
-    }
-
-    li a {
-        font-size: 14px;
-        font-weight: 500;
-        color: #637381;
-        margin-left: 10px;
-        transition: all 0.4s ease;
-        white-space: nowrap;
-        text-transform: capitalize;
-    }
-
-    .navbar-collapse {
-        flex-grow: 0;
-    }
-
-    .nav-item a:hover {
-        color: $color;
-    }
-}
-
-nav .navbar-toggler {
-    .navbar-toggler-icon {
+      }
+  
+      .navbar-toggler-icon {
         width: 20px;
         height: 3px;
-        background: $color;
+        background: #37afc2;
         display: block;
         background-image: none;
         transition: 0.5s ease-in-out;
-    }
-
-    .top-bar {
+      }
+  
+      .top-bar {
         margin-top: 5px;
         transform: rotate(135deg);
-    }
-
-    .bottom-bar {
+      }
+  
+      .bottom-bar {
         margin-top: -3px;
         transform: rotate(-135deg);
+      }
     }
-
-}
-
-nav .collapsed {
-    .top-bar {
+  
+    .collapsed {
+      .top-bar {
         margin-top: 0px;
         transform: rotate(0deg);
-    }
-
-    .bottom-bar {
+      }
+  
+      .bottom-bar {
         margin-top: 5px;
         transform: rotate(0deg);
-        
+      }
     }
-}
-
-@media (max-width: 990px) {
-    .navbar ul {
-        padding-left: 12px;
-        padding-top: 12px;
-    }
-}
+  }

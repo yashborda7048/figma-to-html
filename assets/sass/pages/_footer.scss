@@ -1,69 +1,78 @@
-.footer {
-    border-top: 2m px solid $color;
-    padding: 40px 0px 10px;
-
+footer {
+    background: rgba(55, 176, 194, 0.8431372549);
+  
     .navbar-toggler {
-        padding: 0px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        transition: all 0.4s ease;
+      padding: 0px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transition: all 0.4s ease;
+  
+      .fa {
+        color: #fff;
+      }
     }
-
+  
+    h5 {
+      color: #fff;
+    }
+  
     #contact_footer .d-flex {
-
-        a {
-            color: #000;
-            font-size: 15px;
-            text-decoration: none;
+      a {
+        color: #fff;
+        font-size: 16px;
+        text-decoration: none;
+      }
+  
+      .fa {
+        font-size: 18px;
+        width: 18px;
+        color: #fff;
+      }
+  
+      &:hover {
+        a, i {
+          color: #637381;
         }
-
-        .fa {
-            font-size: 18px;
-            width: 18px;
-        }
-
-        &:hover a,
-        &:hover i {
-            color: $color;
-        }
+      }
     }
-
+  
     ul {
-        list-style: none;
-        padding-left: 0px;
-
-        li {
-            margin-bottom: 10px;
-
-            a {
-                text-transform: capitalize;
-                font-size: 15px;
-                color: #000;
-                margin: 10px 0px;
-
-                .fa {
-                    font-size: 22px;
-                }
-            }
-
-            &:hover a {
-                color: $color;
-            }
-
+      list-style: none;
+      padding-left: 0px;
+  
+      li {
+        margin-bottom: 10px;
+  
+        a {
+          text-transform: capitalize;
+          font-size: 16px;
+          color: #fff;
+          margin: 10px 0px;
+  
+          .fa {
+            font-size: 22px;
+          }
         }
+  
+        &:hover a {
+          color: #637381;
+        }
+      }
     }
-
-    .navbar-toggler.collapsed .fa {
+  
+    .navbar-toggler {
+      &.collapsed .fa {
         transform: rotate(0deg);
-    }
-
-    .navbar-toggler .fa {
+      }
+  
+      .fa {
         transform: rotate(180deg);
+      }
     }
-
+  
     .copyright {
-        color: #000;
-        font-size: 15px;
+      color: #fff;
+      font-size: 16px;
     }
-}
+  }

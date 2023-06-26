@@ -1,0 +1,326 @@
+/* ------------- *
+   media query
+*--------------- */
+/* ------------------------ *
+   (max-width:1299px)
+*------------------------- */
+@media (max-width: 1299px) {
+    .front-page h1 {
+      font-size: 55px;
+    }
+  
+    .vision .goal-main:hover {
+      .goal {
+        &::before {
+          top: -98px;
+          left: -37px;
+        }
+  
+        &::after {
+          top: -66px;
+          left: 10px;
+        }
+      }
+  
+      &::before {
+        top: -134px;
+        left: -67px;
+      }
+    }
+  }
+  
+  /* ---------------------------- *
+        (max-width:1199px)
+  *------------------------------ */
+  @media (max-width: 1199px) {
+    .client .marquee-wrapper .marquee-inner .marquee-items .items .game-logos .bg-img {
+      opacity: 1;
+  
+      &:before {
+        opacity: 1;
+      }
+    }
+  
+    .vision .goal-main:hover {
+      .goal {
+        &::before {
+          left: -67px;
+        }
+  
+        &::after {
+          left: -18px;
+        }
+      }
+  
+      &::before {
+        left: -97px;
+      }
+    }
+  }
+  
+  /* ---------------------------- *
+        (max-width:992px)
+  *------------------------------ */
+  @media (max-width: 992px) {
+    .px-60 {
+      padding: 40px 0px;
+    }
+  
+    .bg-canvas {
+      height: 960px;
+  
+      canvas {
+        height: 960px;
+      }
+    }
+  
+    .navbar ul {
+      padding-left: 12px;
+      padding-top: 12px;
+    }
+  
+    .case-study #portfolio {
+      gap: 30px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .client #client_section {
+      gap: 20px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .vision .goal-main:hover {
+      .goal {
+        &::before {
+          left: -53px;
+        }
+  
+        &::after {
+          left: -4px;
+        }
+      }
+  
+      &::before {
+        left: -83px;
+      }
+    }
+  }
+  
+  /* ---------------------------- *
+        (max-width:768px)
+  *------------------------------ */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 46px;
+    }
+  
+    h2 {
+      font-size: 32px;
+    }
+  
+    .work-flow .process-card .card {
+      min-height: auto;
+      margin-top: 100px !important;
+    }
+  
+    .vision .goal-main:hover {
+      .goal {
+        &::before {
+          top: -88px;
+          left: 31px;
+        }
+  
+        &::after {
+          top: -56px;
+          left: 78px;
+        }
+      }
+  
+      &::before {
+        top: -125px;
+        left: 2px;
+      }
+    }
+  }
+  
+  /* ---------------------------- *
+        (max-width:576px)
+  *------------------------------ */
+  @media (max-width: 576px) {
+    h1 {
+      font-size: 38px !important;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+  
+    h2 {
+      font-size: 28px;
+    }
+  
+    h3 {
+      font-size: 18px;
+    }
+  
+    h5 {
+      font-size: 14px;
+    }
+  
+    h6, .h6 {
+      font-size: 10px;
+    }
+  
+    .logo {
+      max-width: 125px;
+    }
+  
+    .border_title::after {
+      width: 35px;
+      height: 35px;
+    }
+  
+    .bg-canvas {
+      height: 770px;
+  
+      canvas {
+        height: 770px;
+      }
+    }
+  
+    .service .card {
+      padding: 30px 20px !important;
+    }
+  
+    .technologies .technology-container .course {
+      width: 75px;
+      height: 75px;
+  
+      img {
+        max-height: 32px;
+      }
+  
+      h6 {
+        top: 85px;
+        font-size: 11px;
+      }
+    }
+  
+    .case-study #portfolio {
+      gap: 20px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .client {
+      #client_section {
+        gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
+      }
+  
+      .marquee-wrapper .marquee-inner .marquee-items .items {
+        width: 270px;
+        height: 160px;
+  
+        .logo-name img {
+          max-width: 40% !important;
+        }
+      }
+    }
+  
+    .vision .goal-main:hover {
+      .goal {
+        &::before {
+          left: -2px;
+        }
+  
+        &::after {
+          left: 46px;
+        }
+      }
+  
+      &::before {
+        left: -32px;
+      }
+    }
+  }
+  
+  /* ---------------------------- *
+        (max-width:430px)
+  *------------------------------ */
+  @media (max-width: 430px) {
+    h1 {
+      font-size: 34px !important;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+  
+    h2 {
+      font-size: 22px;
+    }
+  
+    p {
+      font-size: 14px;
+    }
+  
+    .logo {
+      max-width: 105px;
+    }
+  
+    .technologies .technology-container .course {
+      width: 67px;
+      height: 67px;
+  
+      h6 {
+        top: 74px;
+        font-size: 11px;
+      }
+    }
+  
+    .client .marquee-wrapper .marquee-inner .marquee-items .items {
+      width: 200px;
+      height: 118px;
+    }
+  
+    .vision .goal-main {
+      .goal {
+        padding: 20px 20px 28px;
+      }
+  
+      &:hover {
+        .goal {
+          &::before {
+            left: -48px;
+          }
+  
+          &::after {
+            left: 1px;
+          }
+        }
+  
+        &::before {
+          left: -79px;
+        }
+      }
+    }
+  
+    .contact .img-fluid {
+      max-width: 100%;
+    }
+  }
+  
+  /* ---------------------------- *
+        (max-width:390px)
+  *------------------------------ */
+  @media (max-width: 390px) {
+    .technologies .technology-container .course {
+      width: 50px;
+      height: 50px;
+  
+      img {
+        max-height: 22px;
+      }
+  
+      h6 {
+        top: 60px;
+        font-size: 7px;
+      }
+    }
+  }
