@@ -1,91 +1,96 @@
-.work-flow .process-card {
-  margin-top: 30px;
+.work-flow {
+  .work-item-wrap {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
 
-  .card {
-    min-height: 370px;
-    border-radius: 15px;
-    background: #fff;
-    box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
-    border: none;
-    transition: all 0.3s ease;
+    .work-line-shape svg {
+      position: absolute;
+      left: 0;
+      top: 105px;
+      right: 0;
+    }
+    .work-line-shape .dashed1 {
+      stroke-dasharray: 1300;
+    }
+    .work-line-shape .dashed2 {
+      stroke-dasharray: 7;
+    }
 
-    .card-circle {
-      width: 100px;
-      height: 100px;
-      padding: 20px;
-      background: #fff;
-      box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
-      border-radius: 50%;
-      margin-top: -50px;
+    .work-item {
+      text-align: center;
+      margin-bottom: 30px;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #212529;
-      font-size: 29px;
-      font-weight: 500;
-    }
-
-    &:hover {
-      transform: translateY(-8px) !important;
-    }
-
-    &.one {
-      margin-top: 50px;
-      border-bottom: 10px solid #6aaffd;
-
-      .card-circle {
-        border: 10px solid #6aaffd;
+      flex-direction: column;
+      .work-icon {
+        width: 140px;
+        height: 140px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        background: #ebf2ff;
+        border-radius: 50%;
+        line-height: 0;
+        color: $color;
+        font-size: 50px;
+        position: relative;
+        transition: 0.3s ease-in-out;
+        z-index: 1;
+        &::before {
+          content: "";
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%) scale(0);
+          background: $color;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          transition: 0.3s ease-in-out;
+          z-index: -1;
+        }
+        .number {
+          margin-bottom: 0;
+          width: 50px;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0px 0px 49px 0px rgba(0, 0, 0, 0.1);
+          background: #fff;
+          color: #272727;
+          border-radius: 50%;
+          font-size: 24px;
+          position: absolute;
+          right: -15px;
+          top: 10px;
+          transition: 0.3s ease-in-out;
+        }
       }
 
-      h5 {
-        color: #6aaffd;
-      }
-    }
-
-    &.two {
-      margin-top: 100px;
-      border-bottom: 10px solid #ffa44b;
-
-      .card-circle {
-        border: 10px solid #ffa44b;
-      }
-
-      h5 {
-        color: #ffa44b;
-      }
-    }
-
-    &.three {
-      margin-top: 50px;
-      border-bottom: 10px solid #f46b6b;
-
-      .card-circle {
-        border: 10px solid #f46b6b;
-      }
-
-      h5 {
-        color: #f46b6b;
-      }
-    }
-
-    &.four {
-      margin-top: 100px;
-      border-bottom: 10px solid #37afc2;
-
-      .card-circle {
-        border: 10px solid #37afc2;
-      }
-
-      h5 {
-        color: #37afc2;
+      &:hover {
+        .work-icon {
+          color: #fff;
+          &::before {
+            transform: translate(-50%, -50%) scale(1);
+          }
+          .number {
+            color: $color;
+          }
+        }
       }
     }
 
-    .card-img-top {
-      margin-top: 20px;
-      margin-bottom: 10px;
-      width: 150px;
-      height: 140px;
+    .mt-185 {
+      margin-top: 185px;
+    }
+    .mt-115 {
+      margin-top: 115px;
+    }
+
+    .work-item-wrap .row [class*="col-"]:nth-child(even) .work-icon {
+      margin: 15px auto 0;
     }
   }
 }

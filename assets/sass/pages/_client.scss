@@ -1,140 +1,144 @@
 .client {
-    .marquee-wrapper {
-      overflow: hidden;
+  .marquee-wrapper {
+    overflow: hidden;
+    width: 100%;
+    line-height: 0;
+    font-size: 0;
+
+    .marquee-inner {
+      display: inline-block;
+      white-space: nowrap;
       width: 100%;
-      line-height: 0;
-      font-size: 0;
-  
-      .marquee-inner {
-        display: inline-block;
-        white-space: nowrap;
+
+      .top-one {
+        display: flex;
+        flex-wrap: nowrap;
         width: 100%;
-  
-        .top-one {
-          display: flex;
-          flex-wrap: nowrap;
-          width: 100%;
-  
-          .marquee-items.left {
-            animation: 30s linear infinite marqueeLeft;
-          }
+
+        .marquee-items.left {
+          animation: 30s linear infinite marqueeLeft;
         }
-  
-        .marquee-items {
-          display: flex;
-          flex-wrap: nowrap;
-          white-space: nowrap;
-          position: relative;
-          transform: translate3d(0, 0, 0);
-  
-          .items {
-            width: 320px;
-            height: 189px;
-  
-            .game-logos {
-              width: 100%;
-              height: 100%;
-              position: relative;
-  
-              &:hover .bg-img {
+      }
+
+      .marquee-items {
+        display: flex;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        position: relative;
+        transform: translate3d(0, 0, 0);
+
+        .items {
+          width: 320px;
+          height: 189px;
+
+          .client-logos {
+            width: 100%;
+            height: 100%;
+            position: relative;
+
+            &:hover .bg-img {
+              opacity: 1;
+
+              &:before {
                 opacity: 1;
-  
-                &:before {
-                  opacity: 1;
-                  transition: transform 0.4s;
-                }
-  
-                &:after {
-                  opacity: 0.15;
-                  transition: transform 0.4s;
-                }
+                transition: transform 0.4s;
               }
-  
-              .bg-img {
-                position: relative;
+
+              &:after {
+                opacity: 0.15;
+                transition: transform 0.4s;
+              }
+            }
+
+            .bg-img {
+              position: relative;
+              opacity: 0;
+
+              img {
+                width: 1020px;
+                aspect-ratio: auto 1020/600;
+                max-width: 100%;
+                height: auto;
+                min-height: 100%;
+              }
+
+              &:before {
                 opacity: 0;
-  
-                img {
-                  width: 1020px;
-                  aspect-ratio: auto 1020/600;
-                  max-width: 100%;
-                  height: auto;
-                  min-height: 100%;
-                }
-  
-                &:before {
-                  opacity: 0;
-                  content: "";
-                  margin: 0;
-                  top: 0;
-                  position: absolute;
-                  min-height: 100%;
-                  max-height: 100%;
-                  width: 100%;
-                  background: linear-gradient(151deg, rgba(34, 193, 195, 0.16) 0%, rgba(34, 193, 195, 0.24) 100%);
-                  z-index: 1;
-                  transition: transform 0.4s;
-                }
-              }
-  
-              .logo-name {
-                position: absolute;
+                content: "";
                 margin: 0;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                z-index: 2;
-                width: calc(100% - 10px);
-                text-align: center;
-  
-                img {
-                  width: 140px;
-                  aspect-ratio: auto 180/100;
-                  height: auto;
-                  min-height: auto;
-                  max-width: 100%;
-                }
+                top: 0;
+                position: absolute;
+                min-height: 100%;
+                max-height: 100%;
+                width: 100%;
+                background: linear-gradient(
+                  151deg,
+                  rgba(34, 193, 195, 0.16) 0%,
+                  rgba(34, 193, 195, 0.24) 100%
+                );
+                z-index: 1;
+                transition: transform 0.4s;
+              }
+            }
+
+            .logo-name {
+              position: absolute;
+              margin: 0;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              z-index: 2;
+              width: calc(100% - 10px);
+              text-align: center;
+
+              img {
+                width: 140px;
+                aspect-ratio: auto 180/100;
+                height: auto;
+                min-height: auto;
+                max-width: 100%;
               }
             }
           }
         }
       }
     }
-  
-    #client_section {
-      gap: 35px;
-      grid-template-columns: repeat(4, 1fr);
-    }
-  
-    .client_logo {
-      height: 180px;
-      max-width: 235px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  
-      img {
-        min-height: 70px;
-      }
+  }
+
+  #client_section {
+    gap: 35px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .client_logo {
+    height: 180px;
+    max-width: 235px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      min-height: 70px;
     }
   }
-  
-  @keyframes marqueeLeft {
-    0% {
-      transform: translate3d(0, 0, 0);
-    }
-  
-    100% {
-      transform: translate3d(-100%, 0, 0);
-    }
+}
+
+@keyframes marqueeLeft {
+  0% {
+    transform: translate3d(0, 0, 0);
   }
-  
-  @keyframes marqueeRight {
-    0% {
-      transform: translate3d(-100%, 0, 0);
-    }
-  
-    100% {
-      transform: translate3d(0, 0, 0);
-    }
+
+  100% {
+    transform: translate3d(-100%, 0, 0);
   }
+}
+
+@keyframes marqueeRight {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}

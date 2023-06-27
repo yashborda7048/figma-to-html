@@ -1,78 +1,79 @@
 footer {
-    background: rgba(55, 176, 194, 0.8431372549);
-  
-    .navbar-toggler {
-      padding: 0px;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      transition: all 0.4s ease;
-  
-      .fa {
-        color: #fff;
-      }
-    }
-  
-    h5 {
+  background: rgba(55, 176, 194, 0.8431372549);
+
+  .navbar-toggler {
+    padding: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.4s ease;
+
+    .fa {
       color: #fff;
-    }
-  
-    #contact_footer .d-flex {
-      a {
-        color: #fff;
-        font-size: 16px;
-        text-decoration: none;
-      }
-  
-      .fa {
-        font-size: 18px;
-        width: 18px;
-        color: #fff;
-      }
-  
-      &:hover {
-        a, i {
-          color: #637381;
-        }
-      }
-    }
-  
-    ul {
-      list-style: none;
-      padding-left: 0px;
-  
-      li {
-        margin-bottom: 10px;
-  
-        a {
-          text-transform: capitalize;
-          font-size: 16px;
-          color: #fff;
-          margin: 10px 0px;
-  
-          .fa {
-            font-size: 22px;
-          }
-        }
-  
-        &:hover a {
-          color: #637381;
-        }
-      }
-    }
-  
-    .navbar-toggler {
-      &.collapsed .fa {
-        transform: rotate(0deg);
-      }
-  
-      .fa {
-        transform: rotate(180deg);
-      }
-    }
-  
-    .copyright {
-      color: #fff;
-      font-size: 16px;
     }
   }
+
+  h5 {
+    color: #fff;
+  }
+
+  #contact_footer .d-flex {
+    a {
+      color: #fff;
+      font-size: 16px;
+      text-decoration: none;
+    }
+
+    .fa {
+      font-size: 18px;
+      width: 18px;
+      color: #fff;
+    }
+
+    &:hover {
+      a,
+      i {
+        color: #637381;
+      }
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0px;
+
+    li {
+      margin-bottom: 10px;
+
+      a {
+        text-transform: capitalize;
+        font-size: 16px;
+        color: #fff;
+        margin: 10px 0px;
+
+        .fa {
+          font-size: 22px;
+        }
+      }
+
+      &:hover a {
+        color: #637381;
+      }
+    }
+  }
+
+  .navbar-toggler {
+    &.collapsed .fa {
+      transform: rotate(0deg);
+    }
+
+    .fa {
+      transform: rotate(180deg);
+    }
+  }
+
+  .copyright {
+    color: #fff;
+    font-size: 16px;
+  }
+}

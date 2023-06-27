@@ -1,57 +1,59 @@
 .contact {
-    form {
-      textarea, input {
-        box-shadow: none !important;
-        border: none;
-        font-size: 13px;
-      }
-  
-      label {
-        color: #919eab;
-      }
-  
-      .error-msg {
-        color: red;
-        margin-bottom: 8px;
-        font-size: 12px;
-        font-weight: 300;
-      }
-  
-      button {
-        padding: 12px 20px;
+  form {
+    textarea,
+    input {
+      box-shadow: none !important;
+      border: none;
+      font-size: 13px;
+    }
+
+    label {
+      color: #919eab;
+    }
+
+    .error-msg {
+      color: red;
+      margin-bottom: 8px;
+      font-size: 12px;
+      font-weight: 300;
+    }
+
+    button {
+      padding: 12px 20px;
+      background-color: #37afc2;
+      border: none;
+      font-weight: 600;
+
+      &:hover {
         background-color: #37afc2;
-        border: none;
-        font-weight: 600;
-  
-        &:hover {
-          background-color: #37afc2;
-          opacity: 0.8;
-        }
-      }
-  
-      input:focus + label, textarea:focus + label {
-        color: #37afc2;
+        opacity: 0.8;
       }
     }
-  
-    h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
-  
-    .information {
-      i {
-        width: 28px;
-        font-size: 22px;
-      }
-  
-      p {
-        color: black;
-        font-size: 15px;
-      }
-    }
-  
-    .img-fluid {
-      max-width: 70%;
+
+    input:focus + label,
+    textarea:focus + label {
+      color: #37afc2;
     }
   }
+
+  h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+
+  .information {
+    i {
+      width: 28px;
+      font-size: 22px;
+    }
+
+    p {
+      color: black;
+      font-size: 15px;
+    }
+  }
+
+  .img-fluid {
+    max-width: 70%;
+  }
+}

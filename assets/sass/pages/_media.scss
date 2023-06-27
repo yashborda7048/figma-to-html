@@ -2,6 +2,21 @@
    media query
 *--------------- */
 /* ------------------------ *
+   (max-width:1399px)
+*------------------------- */
+@media (max-width: 1399px) {
+  .work-flow {
+    .work-item-wrap {
+      .work-line-shape svg {
+        left: -35px;
+      }
+      .mt-115 {
+        margin-top: 92px;
+      }
+    }
+  }
+}
+/* ------------------------ *
    (max-width:1299px)
 *------------------------- */
 @media (max-width: 1299px) {
@@ -43,7 +58,7 @@
     .marquee-inner
     .marquee-items
     .items
-    .game-logos
+    .client-logos
     .bg-img {
     opacity: 1;
 
@@ -90,6 +105,20 @@
     padding-top: 12px;
   }
 
+  .work-flow {
+    .work-item-wrap {
+      .work-line-shape {
+        display: none;
+      }
+      .mt-185 {
+        margin-top: 15px;
+      }
+      .mt-115 {
+        margin-top: 15px;
+      }
+    }
+  }
+
   .case-study #portfolio {
     gap: 30px;
     grid-template-columns: repeat(2, 1fr);
@@ -127,11 +156,6 @@
 
   h2 {
     font-size: 32px;
-  }
-
-  .work-flow .process-card .card {
-    min-height: auto;
-    margin-top: 100px !important;
   }
 
   .vision .goal-main:hover {
@@ -277,13 +301,7 @@
   }
 
   .technologies .technology-container .course {
-    width: 67px;
-    height: 67px;
-
-    h6 {
-      top: 74px;
-      font-size: 11px;
-    }
+    padding: 5px;
   }
 
   .client .marquee-wrapper .marquee-inner .marquee-items .items {
@@ -325,9 +343,8 @@
   .technologies .technology-container .course {
     width: 50px;
     height: 50px;
-
     img {
-      max-height: 22px;
+      max-height: 28px;
     }
 
     h6 {

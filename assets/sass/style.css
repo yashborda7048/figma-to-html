@@ -46,7 +46,8 @@ h5 {
   font-weight: 600;
 }
 
-h6, .h6 {
+h6,
+.h6 {
   font-weight: 600;
   color: #919eab;
   text-transform: uppercase;
@@ -66,7 +67,8 @@ p {
   background-color: #37afc2;
 }
 
-::-moz-selection, ::selection {
+::-moz-selection,
+::selection {
   color: #fff;
   background-color: #37afc2;
 }
@@ -116,7 +118,7 @@ p {
   border: none;
   font-weight: 600;
 }
-.btn-primary:hover {
+.btn-primary:active, .btn-primary:hover {
   background-color: #37afc2;
   opacity: 0.8;
 }
@@ -141,9 +143,6 @@ p {
   justify-content: center;
   align-items: center;
   padding: 11px 12px;
-}
-.arrow-up i {
-  color: #fff;
 }
 
 .bg-canvas {
@@ -263,18 +262,17 @@ p {
   overflow: hidden;
 }
 .service .card::before {
-  width: 120px;
-  height: 120px;
+  width: 220px;
+  height: 220px;
   content: "";
   position: absolute;
   border-radius: 50%;
   background: #37afc2;
   opacity: 0.7;
   transition: 0.5s linear;
-  transform: scale(1);
   transition: all 0.3s ease;
-  bottom: -10%;
-  right: -10%;
+  left: -250px;
+  top: -250px;
 }
 .service .card .card-body {
   margin: 40px 30px 5px;
@@ -293,85 +291,101 @@ p {
   width: 90px;
   transition: all 0.3s ease;
 }
-.service .card:hover .card-body, .service .card:hover::before,
+.service .card:hover .card-body,
 .service .card:hover img {
   transform: scale(1.1);
 }
+.service .card:hover::before {
+  left: -110px;
+  top: -110px;
+}
 
-.work-flow .process-card {
-  margin-top: 30px;
+.work-flow .work-item-wrap {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
 }
-.work-flow .process-card .card {
-  min-height: 370px;
-  border-radius: 15px;
-  background: #fff;
-  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
-  border: none;
-  transition: all 0.3s ease;
+.work-flow .work-item-wrap .work-line-shape svg {
+  position: absolute;
+  left: 0;
+  top: 105px;
+  right: 0;
 }
-.work-flow .process-card .card .card-circle {
-  width: 100px;
-  height: 100px;
-  padding: 20px;
-  background: #fff;
-  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
-  border-radius: 50%;
-  margin-top: -50px;
+.work-flow .work-item-wrap .work-line-shape .dashed1 {
+  stroke-dasharray: 1300;
+}
+.work-flow .work-item-wrap .work-line-shape .dashed2 {
+  stroke-dasharray: 7;
+}
+.work-flow .work-item-wrap .work-item {
+  text-align: center;
+  margin-bottom: 30px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+}
+.work-flow .work-item-wrap .work-item .work-icon {
+  width: 140px;
+  height: 140px;
+  display: flex;
   align-items: center;
-  color: #212529;
-  font-size: 29px;
-  font-weight: 500;
+  justify-content: center;
+  margin: 0 auto 20px;
+  background: #ebf2ff;
+  border-radius: 50%;
+  line-height: 0;
+  color: #37afc2;
+  font-size: 50px;
+  position: relative;
+  transition: 0.3s ease-in-out;
+  z-index: 1;
 }
-.work-flow .process-card .card:hover {
-  transform: translateY(-8px) !important;
+.work-flow .work-item-wrap .work-item .work-icon::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: #37afc2;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: 0.3s ease-in-out;
+  z-index: -1;
 }
-.work-flow .process-card .card.one {
-  margin-top: 50px;
-  border-bottom: 10px solid #6aaffd;
+.work-flow .work-item-wrap .work-item .work-icon .number {
+  margin-bottom: 0;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 49px 0px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  color: #272727;
+  border-radius: 50%;
+  font-size: 24px;
+  position: absolute;
+  right: -15px;
+  top: 10px;
+  transition: 0.3s ease-in-out;
 }
-.work-flow .process-card .card.one .card-circle {
-  border: 10px solid #6aaffd;
+.work-flow .work-item-wrap .work-item:hover .work-icon {
+  color: #fff;
 }
-.work-flow .process-card .card.one h5 {
-  color: #6aaffd;
+.work-flow .work-item-wrap .work-item:hover .work-icon::before {
+  transform: translate(-50%, -50%) scale(1);
 }
-.work-flow .process-card .card.two {
-  margin-top: 100px;
-  border-bottom: 10px solid #ffa44b;
-}
-.work-flow .process-card .card.two .card-circle {
-  border: 10px solid #ffa44b;
-}
-.work-flow .process-card .card.two h5 {
-  color: #ffa44b;
-}
-.work-flow .process-card .card.three {
-  margin-top: 50px;
-  border-bottom: 10px solid #f46b6b;
-}
-.work-flow .process-card .card.three .card-circle {
-  border: 10px solid #f46b6b;
-}
-.work-flow .process-card .card.three h5 {
-  color: #f46b6b;
-}
-.work-flow .process-card .card.four {
-  margin-top: 100px;
-  border-bottom: 10px solid #37afc2;
-}
-.work-flow .process-card .card.four .card-circle {
-  border: 10px solid #37afc2;
-}
-.work-flow .process-card .card.four h5 {
+.work-flow .work-item-wrap .work-item:hover .work-icon .number {
   color: #37afc2;
 }
-.work-flow .process-card .card .card-img-top {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  width: 150px;
-  height: 140px;
+.work-flow .work-item-wrap .mt-185 {
+  margin-top: 185px;
+}
+.work-flow .work-item-wrap .mt-115 {
+  margin-top: 115px;
+}
+.work-flow .work-item-wrap .work-item-wrap .row [class*=col-]:nth-child(even) .work-icon {
+  margin: 15px auto 0;
 }
 
 .technologies .tech {
@@ -397,8 +411,8 @@ p {
   position: absolute;
   top: 110px;
   visibility: hidden;
-  color: rgb(39, 50, 102);
-  font-size: 14px;
+  color: #272727;
+  font-size: 13px;
 }
 .technologies .technology-container .course:hover {
   transform: scale(1.1);
@@ -507,7 +521,7 @@ p {
 .vision .goal-main:hover::before {
   position: absolute;
   top: -134px;
-  left: -47px;
+  left: -77px;
   transform: translate(50%, 50%);
   z-index: 1;
   background-color: #fff !important;
@@ -520,22 +534,21 @@ p {
 .vision .goal-main:hover .goal::after {
   position: absolute;
   top: -66px;
-  left: 30px;
+  left: 3px;
   transform: translate(50%, 50%);
   background-color: #fff !important;
   opacity: 0.1;
 }
 .vision .goal-main:hover .goal::before {
   position: absolute;
-  top: -66px;
-  left: 30px;
   transform: translate(50%, 50%);
   background-color: #fff !important;
   opacity: 0.1;
   top: -98px;
-  left: -17px;
+  left: -39px;
 }
-.vision .goal-main:hover .goal p, .vision .goal-main:hover .goal h5 {
+.vision .goal-main:hover .goal p,
+.vision .goal-main:hover .goal h5 {
   color: #fff;
 }
 
@@ -581,7 +594,7 @@ p {
   font-size: 12px;
   text-transform: uppercase;
   font-family: "__Public_Sans_a5724b", "__Public_Sans_Fallback_a5724b", Helvetica, Arial, sans-serif;
-  color: #919EAB;
+  color: #919eab;
 }
 .case-study #portfolio .card .link {
   cursor: pointer;
@@ -633,34 +646,34 @@ p {
   width: 320px;
   height: 189px;
 }
-.client .marquee-wrapper .marquee-inner .marquee-items .items .game-logos {
+.client .marquee-wrapper .marquee-inner .marquee-items .items .client-logos {
   width: 100%;
   height: 100%;
   position: relative;
 }
-.client .marquee-wrapper .marquee-inner .marquee-items .items .game-logos:hover .bg-img {
+.client .marquee-wrapper .marquee-inner .marquee-items .items .client-logos:hover .bg-img {
   opacity: 1;
 }
-.client .marquee-wrapper .marquee-inner .marquee-items .items .game-logos:hover .bg-img:before {
+.client .marquee-wrapper .marquee-inner .marquee-items .items .client-logos:hover .bg-img:before {
   opacity: 1;
   transition: transform 0.4s;
 }
-.client .marquee-wrapper .marquee-inner .marquee-items .items .game-logos:hover .bg-img:after {
+.client .marquee-wrapper .marquee-inner .marquee-items .items .client-logos:hover .bg-img:after {
   opacity: 0.15;
   transition: transform 0.4s;
 }
-.client .marquee-wrapper .marquee-inner .marquee-items .items .game-logos .bg-img {
+.client .marquee-wrapper .marquee-inner .marquee-items .items .client-logos .bg-img {
   position: relative;
   opacity: 0;
 }
-.client .marquee-wrapper .marquee-inner .marquee-items .items .game-logos .bg-img img {
+.client .marquee-wrapper .marquee-inner .marquee-items .items .client-logos .bg-img img {
   width: 1020px;
   aspect-ratio: auto 1020/600;
   max-width: 100%;
   height: auto;
   min-height: 100%;
 }
-.client .marquee-wrapper .marquee-inner .marquee-items .items .game-logos .bg-img:before {
+.client .marquee-wrapper .marquee-inner .marquee-items .items .client-logos .bg-img:before {
   opacity: 0;
   content: "";
   margin: 0;
@@ -673,7 +686,7 @@ p {
   z-index: 1;
   transition: transform 0.4s;
 }
-.client .marquee-wrapper .marquee-inner .marquee-items .items .game-logos .logo-name {
+.client .marquee-wrapper .marquee-inner .marquee-items .items .client-logos .logo-name {
   position: absolute;
   margin: 0;
   top: 50%;
@@ -683,7 +696,7 @@ p {
   width: calc(100% - 10px);
   text-align: center;
 }
-.client .marquee-wrapper .marquee-inner .marquee-items .items .game-logos .logo-name img {
+.client .marquee-wrapper .marquee-inner .marquee-items .items .client-logos .logo-name img {
   width: 140px;
   aspect-ratio: auto 180/100;
   height: auto;
@@ -721,7 +734,8 @@ p {
     transform: translate3d(0, 0, 0);
   }
 }
-.contact form textarea, .contact form input {
+.contact form textarea,
+.contact form input {
   box-shadow: none !important;
   border: none;
   font-size: 13px;
@@ -745,7 +759,8 @@ p {
   background-color: #37afc2;
   opacity: 0.8;
 }
-.contact form input:focus + label, .contact form textarea:focus + label {
+.contact form input:focus + label,
+.contact form textarea:focus + label {
   color: #37afc2;
 }
 .contact h1 {
@@ -790,7 +805,8 @@ footer #contact_footer .d-flex .fa {
   width: 18px;
   color: #fff;
 }
-footer #contact_footer .d-flex:hover a, footer #contact_footer .d-flex:hover i {
+footer #contact_footer .d-flex:hover a,
+footer #contact_footer .d-flex:hover i {
   color: #637381;
 }
 footer ul {
@@ -827,6 +843,17 @@ footer .copyright {
    media query
 *--------------- */
 /* ------------------------ *
+   (max-width:1399px)
+*------------------------- */
+@media (max-width: 1399px) {
+  .work-flow .work-item-wrap .work-line-shape svg {
+    left: -35px;
+  }
+  .work-flow .work-item-wrap .mt-115 {
+    margin-top: 92px;
+  }
+}
+/* ------------------------ *
    (max-width:1299px)
 *------------------------- */
 @media (max-width: 1299px) {
@@ -852,10 +879,10 @@ footer .copyright {
         (max-width:1199px)
   *------------------------------ */
 @media (max-width: 1199px) {
-  .client .marquee-wrapper .marquee-inner .marquee-items .items .game-logos .bg-img {
+  .client .marquee-wrapper .marquee-inner .marquee-items .items .client-logos .bg-img {
     opacity: 1;
   }
-  .client .marquee-wrapper .marquee-inner .marquee-items .items .game-logos .bg-img:before {
+  .client .marquee-wrapper .marquee-inner .marquee-items .items .client-logos .bg-img:before {
     opacity: 1;
   }
   .vision .goal-main:hover .goal::before {
@@ -885,6 +912,15 @@ footer .copyright {
     padding-left: 12px;
     padding-top: 12px;
   }
+  .work-flow .work-item-wrap .work-line-shape {
+    display: none;
+  }
+  .work-flow .work-item-wrap .mt-185 {
+    margin-top: 15px;
+  }
+  .work-flow .work-item-wrap .mt-115 {
+    margin-top: 15px;
+  }
   .case-study #portfolio {
     gap: 30px;
     grid-template-columns: repeat(2, 1fr);
@@ -912,10 +948,6 @@ footer .copyright {
   }
   h2 {
     font-size: 32px;
-  }
-  .work-flow .process-card .card {
-    min-height: auto;
-    margin-top: 100px !important;
   }
   .vision .goal-main:hover .goal::before {
     top: -88px;
@@ -1023,12 +1055,7 @@ footer .copyright {
     max-width: 105px;
   }
   .technologies .technology-container .course {
-    width: 67px;
-    height: 67px;
-  }
-  .technologies .technology-container .course h6 {
-    top: 74px;
-    font-size: 11px;
+    padding: 5px;
   }
   .client .marquee-wrapper .marquee-inner .marquee-items .items {
     width: 200px;
@@ -1059,7 +1086,7 @@ footer .copyright {
     height: 50px;
   }
   .technologies .technology-container .course img {
-    max-height: 22px;
+    max-height: 28px;
   }
   .technologies .technology-container .course h6 {
     top: 60px;

@@ -1,26 +1,26 @@
 .front-page {
-    width: 100%;
-    min-height: 700px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 85px;
+  width: 100%;
+  min-height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 85px;
 
-    h1 {
-        font-size: 65px;
-    }
+  h1 {
+    font-size: 65px;
+  }
 
-    .home-hero {
-        animation: Moveupdown 3s infinite alternate;
-    }
+  .home-hero {
+    animation: Moveupdown 3s infinite alternate;
+  }
 }
 
 @keyframes Moveupdown {
-    0% {
-        transform: translateY(0);
-    }
+  0% {
+    transform: translateY(0);
+  }
 
-    100% {
-        transform: translateY(25px);
-    }
+  100% {
+    transform: translateY(25px);
+  }
 }
