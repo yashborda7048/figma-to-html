@@ -19,7 +19,6 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #f8f9fa;
 }
 
 h1 {
@@ -156,10 +155,10 @@ p {
   position: absolute;
   width: 100%;
   top: 0;
-  height: 750px;
+  height: 790px;
 }
 .bg-canvas canvas {
-  height: 750px;
+  height: 790px;
 }
 
 /* -------------- *
@@ -456,27 +455,34 @@ p {
   height: 100%;
   box-shadow: -6px 0px 15px rgba(33, 33, 33, 0.1);
 }
-.core-value .card img {
-  display: inline-block;
-  margin: auto;
-  padding-top: 20px;
-  width: 200px;
-  min-height: 200px;
-  height: 200px;
-}
 .core-value .card h5 {
   margin-left: auto;
   margin-right: auto;
   width: -moz-fit-content;
   width: fit-content;
   height: 25px;
-  margin-top: 40px;
   overflow: hidden;
   text-overflow: ellipsis;
   background-position: 0 100%;
   background-repeat: no-repeat;
   transition: all 0.35s ease;
   background-size: 0 1px;
+}
+.core-value .card .icon {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #37afc2;
+  border-radius: 50%;
+  margin: 25px auto;
+  transition: all 0.3s ease;
+}
+.core-value .card .icon i {
+  font-size: 40px;
+  color: #ebf2ff;
+  transition: all 0.3s ease;
 }
 .core-value .card:hover {
   transform: translateY(-4px);
@@ -486,6 +492,12 @@ p {
   color: #37afc2;
   background-image: linear-gradient(130deg, #37afc2, #37afc2);
   background-size: 100% 2px;
+}
+.core-value .card:hover .icon {
+  background-color: #ebf2ff;
+}
+.core-value .card:hover .icon i {
+  color: #37afc2;
 }
 
 .vision .goal-main .goal {
@@ -732,6 +744,9 @@ p {
     transform: translate3d(0, 0, 0);
   }
 }
+.contact {
+  background-color: #f8f9fa;
+}
 .contact form textarea,
 .contact form input {
   box-shadow: none !important;
@@ -901,7 +916,7 @@ footer .copyright {
     padding: 40px 0px;
   }
   .bg-canvas {
-    height: 960px;
+    height: 1025px;
   }
   .bg-canvas canvas {
     height: 960px;
@@ -949,15 +964,15 @@ footer .copyright {
   }
   .vision .goal-main:hover .goal::before {
     top: -88px;
-    left: 31px;
+    left: -21px;
   }
   .vision .goal-main:hover .goal::after {
     top: -56px;
-    left: 78px;
+    left: 25px;
   }
   .vision .goal-main:hover::before {
     top: -125px;
-    left: 2px;
+    left: -56px;
   }
 }
 /* ---------------------------- *
@@ -986,11 +1001,12 @@ footer .copyright {
     max-width: 125px;
   }
   .border_title::after {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
+    left: -8px;
   }
   .bg-canvas {
-    height: 770px;
+    height: 790px;
   }
   .bg-canvas canvas {
     height: 770px;
@@ -1024,14 +1040,11 @@ footer .copyright {
   .client .marquee-wrapper .marquee-inner .marquee-items .items .logo-name img {
     max-width: 40% !important;
   }
-  .vision .goal-main:hover .goal::before {
-    left: -2px;
-  }
-  .vision .goal-main:hover .goal::after {
-    left: 46px;
+  .vision .goal-main:hover .goal::before, .vision .goal-main:hover .goal::after {
+    opacity: 0;
   }
   .vision .goal-main:hover::before {
-    left: -32px;
+    opacity: 0;
   }
 }
 /* ---------------------------- *
@@ -1061,15 +1074,6 @@ footer .copyright {
   }
   .vision .goal-main .goal {
     padding: 20px 20px 28px;
-  }
-  .vision .goal-main:hover .goal::before {
-    left: -48px;
-  }
-  .vision .goal-main:hover .goal::after {
-    left: 1px;
-  }
-  .vision .goal-main:hover::before {
-    left: -79px;
   }
   .contact .img-fluid {
     max-width: 100%;

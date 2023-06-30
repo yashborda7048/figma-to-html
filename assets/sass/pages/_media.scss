@@ -93,7 +93,7 @@
   }
 
   .bg-canvas {
-    height: 960px;
+    height: 1025px;
 
     canvas {
       height: 960px;
@@ -162,18 +162,18 @@
     .goal {
       &::before {
         top: -88px;
-        left: 31px;
+        left: -21px;
       }
 
       &::after {
         top: -56px;
-        left: 78px;
+        left: 25px;
       }
     }
 
     &::before {
       top: -125px;
-      left: 2px;
+      left: -56px;
     }
   }
 }
@@ -210,12 +210,13 @@
   }
 
   .border_title::after {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
+    left: -8px;
   }
 
   .bg-canvas {
-    height: 770px;
+    height: 790px;
 
     canvas {
       height: 770px;
@@ -263,17 +264,14 @@
 
   .vision .goal-main:hover {
     .goal {
-      &::before {
-        left: -2px;
-      }
-
+      &::before,
       &::after {
-        left: 46px;
+        opacity: 0;
       }
     }
 
     &::before {
-      left: -32px;
+      opacity: 0;
     }
   }
 }
@@ -312,22 +310,6 @@
   .vision .goal-main {
     .goal {
       padding: 20px 20px 28px;
-    }
-
-    &:hover {
-      .goal {
-        &::before {
-          left: -48px;
-        }
-
-        &::after {
-          left: 1px;
-        }
-      }
-
-      &::before {
-        left: -79px;
-      }
     }
   }
 
