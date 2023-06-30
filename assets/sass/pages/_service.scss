@@ -1,55 +1,81 @@
-.service .card {
-  border-radius: 16px;
-  border: none;
-  height: 100%;
-  padding: 40px 20px;
-  transition: all 0.6s ease;
-  background-color: #fff;
-  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
-  overflow: hidden;
+.service {
+  .card {
+    border-radius: 16px;
+    border: none;
+    height: 100%;
+    padding: 40px 30px 15px;
+    transition: all 0.6s ease;
+    background-color: #fff;
+    box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 
-  &::before {
-    width: 220px;
-    height: 220px;
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    background: #37afc2;
-    opacity: 0.7;
-    transition: 0.5s linear;
-    transition: all 0.3s ease;
-    left: -250px;
-    top: -250px;
-  }
-
-  .card-body {
-    margin: 40px 30px 5px;
-    padding: 0px;
-    transform: scale(1);
-    transition: all 0.3s ease;
-  }
-
-  p {
-    font-size: 14px;
-    line-height: 24px;
-  }
-
-  img {
-    display: inline-block;
-    margin: auto;
-    transform: scale(1);
-    width: 90px;
-    transition: all 0.3s ease;
-  }
-
-  &:hover {
-    .card-body,
-    img {
-      transform: scale(1.1);
-    }
     &::before {
-        left: -110px;
-        top: -110px;
+      content: "";
+      position: absolute;
+      left: -3%;
+      top: -100%;
+      width: 324px;
+      height: 256px;
+      border-radius: 0px 0px 255px 0px;
+      transition: 0.3s linear;
+      z-index: -1;
+      background: $color;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: -3%;
+      top: -36%;
+      width: 324px;
+      height: 256px;
+      background: #f4f9ff;
+      border-radius: 0px 0px 255px 0px;
+      transition: 0.3s linear;
+      z-index: -2;
+    }
+
+    .card-body {
+      padding: 0px;
+      text-align: left;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    .icon {
+      width: 90px;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $color;
+      border-radius: 50%;
+      margin-bottom: 25px;
+      transition: all 0.3s ease;
+
+      svg {
+        width: 55px;
+        fill: #ebf2ff;
+        transition: all 0.3s ease;
+      }
+    }
+
+    &:hover {
+      &::before {
+        top: -36%;
+      }
+      &::after {
+        opacity: 0;
+      }
+      .icon {
+        background-color: #ebf2ff;
+        svg {
+          fill: $color;
+        }
+      }
     }
   }
 }
