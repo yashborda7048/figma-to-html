@@ -77,10 +77,9 @@
         opacity: 1;
       }
       .overlay_logo {
-        img {
-          filter: brightness(0) invert(1);
-          &.filter-none {
-            filter: none;
+        img { 
+          &.filter {
+            filter: brightness(0) invert(1);
           }
         }
       }

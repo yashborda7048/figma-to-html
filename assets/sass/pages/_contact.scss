@@ -1,9 +1,16 @@
 .contact {
   background-color: #f8f9fa;
   form {
+    padding: 18px 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.1);
     textarea,
-    input {
-      box-shadow: none !important;
+    input,
+    textarea:focus,
+    input:focus {
+      background-color: #f8f9fa;
+      box-shadow: none;
       border: none;
       font-size: 13px;
     }
@@ -55,6 +62,7 @@
   }
 
   .img-fluid {
-    max-width: 70%;
+    // max-width: 80%;
+    max-height: 600px;
   }
 }

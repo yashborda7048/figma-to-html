@@ -721,11 +721,8 @@ p {
   cursor: pointer;
   opacity: 1;
 }
-.client .client_logo:hover .overlay_logo img {
+.client .client_logo:hover .overlay_logo img.filter {
   filter: brightness(0) invert(1);
-}
-.client .client_logo:hover .overlay_logo img.filter-none {
-  filter: none;
 }
 
 @keyframes marqueeLeft {
@@ -747,9 +744,18 @@ p {
 .contact {
   background-color: #f8f9fa;
 }
+.contact form {
+  padding: 18px 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.1);
+}
 .contact form textarea,
-.contact form input {
-  box-shadow: none !important;
+.contact form input,
+.contact form textarea:focus,
+.contact form input:focus {
+  background-color: #f8f9fa;
+  box-shadow: none;
   border: none;
   font-size: 13px;
 }
@@ -789,7 +795,7 @@ p {
   font-size: 15px;
 }
 .contact .img-fluid {
-  max-width: 70%;
+  max-height: 600px;
 }
 
 footer {
