@@ -1,41 +1,10 @@
 footer {
-  background: rgba(55, 176, 194, 0.8431372549);
-
   .navbar-toggler {
     padding: 0px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     transition: all 0.4s ease;
-
-    .fa {
-      color: #fff;
-    }
-  }
-
-  h5 {
-    color: #fff;
-  }
-
-  #contact_footer .d-flex {
-    a {
-      color: #fff;
-      font-size: 16px;
-      text-decoration: none;
-    }
-
-    .fa {
-      font-size: 18px;
-      width: 18px;
-      color: #fff;
-    }
-
-    &:hover {
-      a,
-      i {
-        color: #637381;
-      }
-    }
   }
 
   ul {
@@ -48,16 +17,27 @@ footer {
       a {
         text-transform: capitalize;
         font-size: 16px;
-        color: #fff;
-        margin: 10px 0px;
+        color: #637381;
+        background-position: 0 100%;
+        background-repeat: no-repeat;
+        transition: all 0.35s ease;
+        background-size: 0 1px;
 
         .fa {
           font-size: 22px;
+          color: #637381;
         }
       }
 
-      &:hover a {
-        color: #637381;
+      &:hover {
+        a {
+          color: $color;
+          background-image: linear-gradient(130deg, #37afc2, #37afc2);
+          background-size: 100% 2px;
+        }
+        .fa {
+          color: $color;
+        }
       }
     }
   }
@@ -73,7 +53,7 @@ footer {
   }
 
   .copyright {
-    color: #fff;
+    // color: #fff;
     font-size: 16px;
   }
 }
