@@ -13,6 +13,11 @@ $color: #37afc2;
   font-family: "Poppins", sans-serif;
 }
 
+::selection {
+  background-color: $color;
+  color: #fff;
+}
+
 a {
   text-decoration: none;
 }

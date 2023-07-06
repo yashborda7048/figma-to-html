@@ -9,6 +9,16 @@
   font-family: "Poppins", sans-serif;
 }
 
+::-moz-selection {
+  background-color: #37afc2;
+  color: #fff;
+}
+
+::selection {
+  background-color: #37afc2;
+  color: #fff;
+}
+
 a {
   text-decoration: none;
 }
@@ -314,6 +324,10 @@ p {
   fill: #ebf2ff;
   transition: all 0.3s ease;
 }
+.service .card .icon img {
+  width: 50px;
+  filter: brightness(0) invert(1);
+}
 .service .card:hover::before {
   top: -36%;
 }
@@ -325,6 +339,9 @@ p {
 }
 .service .card:hover .icon svg {
   fill: #37afc2;
+}
+.service .card:hover .icon img {
+  filter: none;
 }
 
 .work-flow .work-item-wrap {
@@ -539,6 +556,10 @@ p {
   fill: #fff;
   transition: all 0.3s ease;
 }
+.vision .goal-main .goal .icon img {
+  width: 70px;
+  filter: brightness(0) invert(1);
+}
 .vision .goal-main .goal h5 {
   font-size: 22px;
   text-transform: capitalize;
@@ -592,6 +613,9 @@ p {
 }
 .vision .goal-main:hover .goal .icon svg {
   fill: #37afc2;
+}
+.vision .goal-main:hover .goal .icon img {
+  filter: none;
 }
 .vision .goal-main:hover .goal p,
 .vision .goal-main:hover .goal h5 {
@@ -751,12 +775,11 @@ p {
 .contact form textarea,
 .contact form input,
 .contact form textarea:focus,
-.contact form input:focus,
-.contact form input:-internal-autofill-selected {
+.contact form input:focus {
   background-color: #fff !important;
   box-shadow: none;
-  border: none;
   font-size: 13px;
+  border: 1px solid #37afc2;
 }
 .contact form label {
   color: #919eab;
@@ -780,6 +803,20 @@ p {
 .contact form input:focus + label,
 .contact form textarea:focus + label {
   color: #37afc2;
+}
+.contact form input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+  display: none;
+}
+.contact form input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+  display: none;
 }
 .contact .border_title {
   width: -moz-fit-content;
