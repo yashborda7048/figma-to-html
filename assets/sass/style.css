@@ -687,7 +687,7 @@ p {
 }
 
 .client #client_section {
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   border-collapse: collapse;
 }
 .client .client_logo {
@@ -765,9 +765,6 @@ p {
   100% {
     transform: translate3d(0, 0, 0);
   }
-}
-.contact {
-  background-color: rgb(232, 240, 254);
 }
 .contact form {
   border-radius: 10px;
