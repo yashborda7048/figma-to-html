@@ -778,6 +778,9 @@ p {
 .contact form {
   border-radius: 10px;
 }
+.contact form p {
+  margin-bottom: 0px;
+}
 .contact form textarea,
 .contact form input,
 .contact form textarea:focus,
