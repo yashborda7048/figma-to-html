@@ -775,6 +775,9 @@ p {
     transform: translate3d(0, 0, 0);
   }
 }
+.contact .wpcf7-response-output {
+  text-align: center;
+}
 .contact form {
   border-radius: 10px;
 }

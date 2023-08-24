@@ -62,6 +62,7 @@
         fill: #ebf2ff;
         transition: all 0.3s ease;
       }
+
       img {
         width: 50px;
         filter: brightness(0) invert(1);
@@ -72,14 +73,18 @@
       &::before {
         top: -36%;
       }
+
       &::after {
         opacity: 0;
       }
+
       .icon {
         background-color: #ebf2ff;
+
         svg {
           fill: $color;
         }
+
         img {
           filter: none;
         }
