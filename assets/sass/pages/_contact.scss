@@ -4,6 +4,10 @@
     text-align: center;
   }
 
+  .screen-reader-response {
+    display: none !important;
+  }
+
   form {
     border-radius: 10px;
 
@@ -12,19 +16,30 @@
     }
 
     textarea,
-    input,
+    input {
+      background-color: #fff !important;
+      box-shadow: none !important;
+      font-size: 15px;
+      padding: 15px;
+      margin-bottom: 6px;
+      border: 1.5px solid #444;
+    }
+
+    textarea {
+      height: 150px;
+    }
+
     textarea:focus,
     input:focus {
-      background-color: #fff !important;
-      box-shadow: none;
-      font-size: 13px;
+      border: 1.5px solid #37afc2;
     }
 
     label {
-      color: #919eab;
+      color: #637381;
+      margin-bottom: 5px;
     }
 
-    .error-msg {
+    .wpcf7-not-valid-tip {
       color: red;
       margin-bottom: 8px;
       font-size: 12px;
@@ -43,10 +58,6 @@
       }
     }
 
-    input:focus+label,
-    textarea:focus+label {
-      color: #37afc2;
-    }
 
     input[type="number"] {
       &::-webkit-inner-spin-button {

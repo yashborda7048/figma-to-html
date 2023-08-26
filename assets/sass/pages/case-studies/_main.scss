@@ -1,0 +1,50 @@
+#case-studies {
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 85px;
+
+    h1 {
+        font-size: 75px;
+    }
+}
+
+.project-section {
+    .main-img {
+        max-width: 500px;
+        width: 100%;
+        border-radius: 15px;
+    }
+}
+
+.case-studies-content {
+    .sub_heading {
+        font-size: 16px;
+    }
+
+    .border_title {
+        font-size: 50px;
+        font-family: "Lora", serif;
+        font-weight: 600;
+
+        &.border_title::after {
+            width: 55px;
+            height: 55px;
+            top: 6px;
+        }
+    }
+
+    .ul-list {
+        li {
+            color: #637381;
+            font-size: 16px;
+            margin-bottom: 10px;
+
+            &::marker {
+                color: #37afc2;
+            }
+        }
+    }
+}
