@@ -10,12 +10,14 @@
       .work-line-shape svg {
         left: -35px;
       }
+
       .mt-115 {
         margin-top: 92px;
       }
     }
   }
 }
+
 /* ------------------------ *
    (max-width:1299px)
 *------------------------- */
@@ -53,13 +55,7 @@
         (max-width:1199px)
   *------------------------------ */
 @media (max-width: 1199px) {
-  .client
-    .marquee-wrapper
-    .marquee-inner
-    .marquee-items
-    .items
-    .client-logos
-    .bg-img {
+  .client .marquee-wrapper .marquee-inner .marquee-items .items .client-logos .bg-img {
     opacity: 1;
 
     &:before {
@@ -100,9 +96,17 @@
     }
   }
 
-  .navbar ul {
-    padding-left: 12px;
-    padding-top: 12px;
+  .navbar {
+    .navbar-collapse {
+      background-color: rgb(248, 249, 250);
+      margin-top: 15px;
+    }
+
+    &.active_nav {
+      .navbar-collapse {
+        background-color: transparent;
+      }
+    }
   }
 
   .work-flow {
@@ -110,9 +114,11 @@
       .work-line-shape {
         display: none;
       }
+
       .mt-185 {
         margin-top: 15px;
       }
+
       .mt-115 {
         margin-top: 15px;
       }
@@ -264,6 +270,7 @@
 
   .vision .goal-main:hover {
     .goal {
+
       &::before,
       &::after {
         opacity: 0;
@@ -273,6 +280,11 @@
     &::before {
       opacity: 0;
     }
+  }
+
+  .map {
+    width: 100%;
+    height: 420px;
   }
 }
 
@@ -325,6 +337,7 @@
   .technologies .technology-container .course {
     width: 50px;
     height: 50px;
+
     img {
       max-height: 28px;
     }

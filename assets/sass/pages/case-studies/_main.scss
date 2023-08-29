@@ -35,16 +35,112 @@
             top: 6px;
         }
     }
+}
 
-    .ul-list {
-        li {
-            color: #637381;
-            font-size: 16px;
-            margin-bottom: 10px;
+.ul-list {
+    li {
+        color: #637381;
+        font-size: 16px;
+        margin-bottom: 10px;
 
-            &::marker {
+        &::marker {
+            color: #37afc2;
+        }
+    }
+}
+
+.blog-form {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    padding: 10px;
+    border-radius: 10px;
+
+    input {
+        background-color: #edf6fd !important;
+        box-shadow: none !important;
+        font-size: 16px;
+        line-height: 15px;
+        padding: 11px 15px;
+        border: none;
+    }
+
+    button {
+        padding: 9px 20px;
+        border-radius: 5px;
+        width: 110px;
+        height: 47px;
+    }
+}
+
+.blog-container {
+    .main-img {
+        width: 100%;
+        height: 350px;
+        margin-bottom: 30px;
+    }
+
+    .link {
+        color: #000;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        width: fit-content;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #000;
+        transition: all 0.3s ease-in-out;
+
+        .dot {
+            margin-top: -7px;
+
+            .fa-circle {
+                font-size: 5px;
+            }
+        }
+
+        &:focus,
+        &:hover {
+            color: #37afc2;
+            border-bottom: 1px solid #37afc2;
+        }
+    }
+
+    .title {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        min-height: 72px;
+    }
+
+    .paragraph {
+        text-align: justify;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        min-height: 96px;
+    }
+
+    .tag {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        flex-wrap: wrap;
+
+        a {
+            padding: 3px 15px;
+            border-radius: 50px;
+            border: 1px solid #000;
+            color: #000;
+
+            &:hover {
+                border: 1px solid #37afc2;
                 color: #37afc2;
             }
         }
     }
+}
+
+.recent-blog {
+    padding: 10px;
 }
