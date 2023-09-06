@@ -1,0 +1,81 @@
+.header-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    @include common-flex();
+
+    .navbar {
+        width: 100%;
+        padding: 30px 0px;
+        background-color: #eef5f4;
+
+        .navbar-toggler {
+            box-shadow: none !important;
+            border: 0;
+            padding: 0px 0px 0px 8px;
+
+            &:focus,
+            &:active,
+            .navbar-toggler-icon:focus {
+                outline: none;
+                box-shadow: none;
+                border: 0;
+            }
+
+            .navbar-toggler-icon {
+                width: 22px;
+                height: 2px;
+                background: #000;
+                display: block;
+                background-image: none;
+                transition: .5s ease-in-out;
+            }
+
+            .top-bar {
+                margin-top: 5px;
+                transform: rotate(135deg);
+            }
+
+            .bottom-bar {
+                margin-top: -2px;
+                transform: rotate(-135deg);
+            }
+
+            &.collapsed .top-bar {
+                margin-top: 0px;
+                transform: rotate(0deg);
+            }
+
+            &.collapsed .bottom-bar {
+                margin-top: 6px;
+                transform: rotate(0deg);
+            }
+        }
+
+        .gap-40 {
+            gap: 40px;
+        }
+
+        .nav-link {
+            padding: 0;
+            font-size: 16px;
+            font-weight: 400;
+            color: #000;
+            letter-spacing: 0.16px;
+            border: 1px solid transparent;
+            width: max-content;
+
+            &.active,
+            &:hover {
+                color: #37AFC2;
+                border-bottom: 1px solid #37AFC2;
+            }
+        }
+    }
+}
+
+.page-content {
+    padding-top: 96px;
+}

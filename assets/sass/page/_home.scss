@@ -1,0 +1,73 @@
+.client-logo {
+    text-align: center;
+}
+
+.text-h4 {
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.a-link {
+    color: #000;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.18px;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+    .common-btn {
+        padding: 14px 20px 13px;
+    }
+
+    p {
+        margin-bottom: 0%;
+    }
+}
+
+.modal-backdrop.show {
+    opacity: 0;
+}
+
+.wpcf7-response-output,
+.wpcf7-spinner {
+    display: none;
+}
+
+.form-control {
+    padding: 14px 20px;
+    border-radius: 4px;
+    background-color: #F5F5F5;
+    border: 1px solid transparent;
+    color: #000;
+    font-family: DM Sans;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.15px;
+    height: 48px;
+
+    &:hover,
+    &:focus {
+        box-shadow: none;
+        background-color: #F5F5F5;
+        border-color: #000;
+    }
+}
+
+.form-select {
+    option {
+
+        &:hover,
+        &:focus {
+            background-color: #000;
+        }
+    }
+}
+
+textarea.form-control {
+    height: 120px;
+}

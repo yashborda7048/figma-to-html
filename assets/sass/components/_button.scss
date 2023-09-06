@@ -1,0 +1,23 @@
+/* ----------------------- *
+   common button class 
+*----------------------- */
+.common-btn {
+    padding: 20px 40px;
+    color: #FFF;
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background: #000;
+    border: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+    
+    &:hover,
+    &:active {
+        background: #333;
+        border: 1px solid #333;
+    }
+}
