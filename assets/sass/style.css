@@ -231,10 +231,12 @@ p {
   background: #000;
   border: 1px solid transparent;
   transition: all 0.3s ease-in-out;
+  text-decoration: none;
 }
 .common-btn:hover, .common-btn:active {
   background: #333;
   border: 1px solid #333;
+  color: #FFF;
 }
 
 /* ------------------- *
@@ -367,6 +369,7 @@ p {
   font-weight: 600;
   letter-spacing: 0.36px;
   padding: 25px 20px 20px 24px;
+  gap: 15px;
 }
 .faq-box .accordion-item .accordion-button::after {
   width: 20px;
@@ -406,6 +409,47 @@ p {
 }
 .faq-box .accordion-item .accordion-body p {
   margin-bottom: 0%;
+}
+
+.client-studies-box {
+  padding: 45px;
+  border-radius: 15px;
+}
+.client-studies-box h2 {
+  font-family: Lora;
+  font-weight: 700;
+  margin-bottom: 33px;
+}
+.client-studies-box .tag {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 33px;
+}
+.client-studies-box .tag div {
+  padding: 3px 15px;
+  border-radius: 50px;
+  text-decoration: none;
+}
+.client-studies-box .main-img {
+  text-align: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.client-studies-box .logo {
+  margin-bottom: 33px;
+}
+.client-studies-box .common-btn {
+  min-height: 60px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: -moz-max-content;
+  width: max-content;
+  border: none;
 }
 
 .header-wrap {
@@ -961,14 +1005,6 @@ textarea.form-control {
   color: #FFF;
 }
 
-/* ---------------------------- 
-      (min-width:1200px)
------------------------------- */
-@media only screen and (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
-  }
-}
 /* ---------------------------- 
       (max-width:992px)
 ------------------------------ */

@@ -142,6 +142,7 @@
             font-weight: 600;
             letter-spacing: 0.36px;
             padding: 25px 20px 20px 24px;
+            gap: 15px;
 
             &::after {
                 width: 20px;
@@ -188,5 +189,51 @@
                 margin-bottom: 0%;
             }
         }
+    }
+}
+
+.client-studies-box {
+    padding: 45px;
+    border-radius: 15px;
+
+    h2 {
+        font-family: Lora;
+        font-weight: 700;
+        margin-bottom: 33px;
+    }
+
+    .tag {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 33px;
+
+        div {
+            padding: 3px 15px;
+            border-radius: 50px;
+            text-decoration: none;
+        }
+    }
+
+    .main-img {
+        text-align: right;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .logo {
+        margin-bottom: 33px;
+    }
+
+    .common-btn {
+        min-height: 60px;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        width: max-content;
+        border: none;
     }
 }
