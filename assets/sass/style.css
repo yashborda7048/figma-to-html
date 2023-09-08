@@ -144,6 +144,12 @@ body {
   letter-spacing: 0.2px;
 }
 
+.text-h3 {
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
 .faq-title {
   text-align: center;
   font-family: "Open Sans", sans-serif;
@@ -451,6 +457,12 @@ p {
   width: max-content;
   border: none;
 }
+.client-studies-box .common-btn img {
+  transition: all 0.3s ease;
+}
+.client-studies-box .common-btn:hover img {
+  transform: translateX(7px);
+}
 
 .header-wrap {
   position: fixed;
@@ -522,6 +534,60 @@ p {
 
 .page-content {
   padding-top: 96px;
+}
+
+.link-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.link-list a {
+  color: #000;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.link-list a:hover {
+  color: #37AFC2;
+  transform: translateX(7px);
+}
+
+.contact-link {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.contact-link .icon {
+  min-width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-link .icon i {
+  color: #37AFC2;
+}
+.contact-link a {
+  color: #000;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.contact-link a:hover {
+  color: #37AFC2;
+}
+
+.footer {
+  background-image: url("../image/choose_bg.jpg");
+}
+.footer .text-h3 {
+  color: #37AFC2;
+  margin-bottom: 30px;
+  width: -moz-max-content;
+  width: max-content;
+  border-bottom: 3px solid #444;
 }
 
 .client-logo {
